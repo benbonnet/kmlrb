@@ -112,7 +112,7 @@ class Kamal::Configuration
   end
 
   def absolute_image
-    "#{repository}:#{version}"
+    raw_config.tagged_image || "#{repository}:#{version}"
   end
 
   def latest_image
